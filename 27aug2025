@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Intro Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary-color: #4f46e5; /* Indigo for modern tech feel */
+      --secondary-color: #6366f1;
+      --text-dark: #1f2937;
+      --text-light: #6b7280;
+      --bg-light: #f9fafb;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--bg-light), #e0e7ff);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+      animation: pulse 10s infinite;
+      z-index: -1;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.2); opacity: 0.3; }
+      100% { transform: scale(1); opacity: 0.5; }
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+      color: var(--text-light);
+      max-width: 600px;
+      animation: fadeInUp 1s ease-out 0.3s;
+      animation-fill-mode: both;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: #fff;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+      animation: fadeInUp 1s ease-out 0.6s;
+      animation-fill-mode: both;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+    }
+
+    .cta-btn::after {
+      content: '→';
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-btn:hover::after {
+      transform: translateX(5px);
+    }
+
+    .footer {
+      margin-top: auto;
+      padding-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      opacity: 0.8;
+      animation: fadeIn 1s ease-out 0.9s;
+      animation-fill-mode: both;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      p { font-size: 1.1rem; max-width: 90%; }
+      .cta-btn { padding: 0.8rem 2rem; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Music Here and There App Project</h1>
+    <p>We will announce our project shortly!!</p>
+    <a href="#" class="cta-btn">Get Started</a>
+    <div class="footer">
+      &copy; 2025 Music Here and There
+    </div>
+  </div>
+</body>
+</html>

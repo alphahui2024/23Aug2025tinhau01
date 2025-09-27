@@ -101,23 +101,82 @@
         #signup {
             background-color: rgba(0, 0, 0, 0.5);
         }
+        .language-switcher {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+        .language-switcher select {
+            padding: 5px;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact label {
+            display: block;
+            margin-top: 10px;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact a {
+            color: #ffffff;
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+        .under-construction {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 165, 0, 0.8);
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            z-index: 9999;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Under Construction Label -->
+    <div class="under-construction">Under Construction</div>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <select onchange="location = this.value;">
+            <option value="" selected>English</option>
+            <option value="traditional.html">繁體中文</option>
+            <option value="simplified.html">简体中文</option>
+        </select>
+    </div>
+
     <!-- Hero Section -->
     <header class="hero" id="hero">
         <h1>Revolutionizing the Music Industry</h1>
-        <p>Your Ultimate Super App for Music Creators, Tutors, and Enthusiasts</p>
-        <button onclick="location.href='#beta'">Join the Beta</button>
-        <button onclick="location.href='#features'">Learn More</button>
+        <p>Ultimate Super App for Music Creators and Enthusiasts</p>
+        <button>Join the Beta</button>
+        <button>Learn More</button>
     </header>
 
     <!-- Beta Version Announcement -->
     <section id="beta">
         <h2>Join Our Beta Program</h2>
-        <p>Be among the first to experience our innovative features. Join our beta program and help shape the future of the music industry.</p>
-        <button onclick="location.href='#signup'">Sign Up for Beta</button>
+        <p>Experience innovative features first. Join beta to shape music's future.</p>
+        <button>Sign Up for Beta</button>
     </section>
 
     <!-- Features Overview -->
@@ -125,15 +184,15 @@
         <h2>Innovative Features</h2>
         <div class="feature">
             <h3>Transparent Calendar on Map</h3>
-            <p>Easily book music studios and find music-related locations with our innovative transparent calendar on the map. Filter by date and location to find the perfect spot for your needs.</p>
+            <p>Book studios easily with map calendar. Filter by date/location.</p>
         </div>
         <div class="feature">
             <h3>Scrollable Timeline</h3>
-            <p>Navigate through past and future events effortlessly with our bottom-screen timeline. Stay updated and never miss an important date.</p>
+            <p>Navigate events with bottom timeline. Stay updated.</p>
         </div>
         <div class="feature">
             <h3>Coming Soon</h3>
-            <p>Stay tuned for our next game-changing feature in location recognition and social media presentation!</p>
+            <p>Next feature: location recognition and social presentation.</p>
         </div>
     </section>
 
@@ -141,52 +200,69 @@
     <section class="audience">
         <h2>Who Can Benefit?</h2>
         <ul>
-            <li>Music Creators: Book studios, find collaborators, and manage your schedule.</li>
-            <li>Service Providers: Offer your services and connect with potential clients.</li>
-            <li>Tutors: Schedule lessons and manage your students.</li>
-            <li>Music Lovers: Discover events and connect with the music community.</li>
-            <li>Music Students & Parents: Find tutors, book lessons, and stay organized.</li>
-            <li>Entire Music Industry: A comprehensive platform for all your music needs.</li>
+            <li>Music Creators: Book studios, find collaborators.</li>
+            <li>Service Providers: Offer services, connect clients.</li>
+            <li>Tutors: Schedule lessons, manage students.</li>
+            <li>Music Lovers: Discover events, join community.</li>
+            <li>Students & Parents: Find tutors, book lessons.</li>
+            <li>Music Industry: Comprehensive platform for needs.</li>
         </ul>
     </section>
 
     <!-- Testimonials/Reviews -->
     <section class="testimonials">
         <h2>What Our Users Say</h2>
+        <p>Hear early users on features.</p>
         <div class="testimonial">
-            <p>"This app has transformed the way I manage my music career. The transparent calendar on the map is a game-changer!" - Music Creator</p>
+            <p>"Transformed my career. Map calendar is game-changer!" - Creator</p>
         </div>
         <div class="testimonial">
-            <p>"As a tutor, I love how easy it is to schedule lessons and manage my students. Highly recommend!" - Music Tutor</p>
+            <p>"Easy scheduling. Recommend!" - Tutor</p>
         </div>
     </section>
 
     <!-- FAQ Section -->
     <section class="faq">
         <h2>Frequently Asked Questions</h2>
+        <p>Answers to common app questions.</p>
         <details>
-            <summary>What is the purpose of this app?</summary>
-            <p>Our super app aims to revolutionize the music industry by providing a comprehensive platform for music creators, service providers, tutors, music lovers, and more.</p>
+            <summary>App purpose?</summary>
+            <p>Revolutionize music with platform for creators, tutors, more.</p>
         </details>
         <details>
-            <summary>How can I join the beta program?</summary>
-            <p>Click on the "Join the Beta" button and sign up to be among the first to experience our innovative features.</p>
+            <summary>Join beta?</summary>
+            <p>Click Join Beta and sign up.</p>
         </details>
         <details>
-            <summary>What features are included in the beta version?</summary>
-            <p>The beta version includes a transparent calendar on the map for booking music studios and a scrollable timeline for navigating past and future events. More features will be announced soon.</p>
+            <summary>Beta features?</summary>
+            <p>Map calendar, timeline. More soon.</p>
         </details>
         <details>
-            <summary>Who can benefit from this app?</summary>
-            <p>Music creators, service providers, tutors, music lovers, music students, parents, and the entire music industry can benefit from our comprehensive platform.</p>
+            <summary>Who benefits?</summary>
+            <p>Creators, providers, tutors, lovers, students, industry.</p>
         </details>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Provide email/WhatsApp or send message.</p>
+        <a href="mailto:contact@musicapp.com">Email Us</a>
+        <a href="https://wa.me/1234567890">WhatsApp Us</a>
+        <form action="https://formspree.io/f/yourformid" method="POST">
+            <label>Your Email:</label>
+            <input type="email" name="email" required>
+            <label>Message:</label>
+            <textarea name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
     <!-- Call to Action -->
     <section id="signup">
         <h2>Join Our Community</h2>
-        <p>Start exploring today and take your music journey to the next level.</p>
-        <button onclick="alert('Sign up form placeholder - implement your form here!')">Sign Up</button>
+        <p>Start exploring today.</p>
+        <button>Sign Up</button>
     </section>
 
 </body>
